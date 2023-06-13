@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>계산기</h1>
+    <script type="text/javascript">
+        var n1 = prompt("첫번째 숫자를 입력하세요", " ");
+        var operator = prompt("연산자를 입력하세요", " ");
+        var n2 = prompt("두번째 숫자를 입력하세요", " ");
+
+        switch (operator) {
+            case "+":
+                alert("더하기 값 : " + (parseInt(n1) + parseInt(n2)));
+                break;
+            case "-":
+                alert("빼기 값 : " + (n1-n2));
+                break;
+            case "*":
+                alert("곱하기 값 : " + (n1*n2));
+                break;
+            case "/":
+                alert("나누기 값 : " + (n1/n2));
+                break;
+            default:
+                alert("연산자가 잘못 입력되었습니다.");
+        }
+
+    </script>
+</body>
+
+</html>

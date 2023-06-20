@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+   <h1>다양한 입력 폼</h1>
+    <form method="get" action="form.app.js">
+        성명 : <input type="text" name="person"/><br>
+        성별 : <input type="radio" name="sex" value="male"/>남성
+        <input type="radio" name="sex" value="female"/>여성<br>
+        직업 : <select name="job" size="1">
+            <option>학생</option><option>회사원</option>
+            <option>공무원</option><option>기타</option>
+        </select>
+        
+        <p>구인희망분야(복수선택 가능)</p>
+        -분야 : <input type="checkbox" name="books" value="conputer"/>컴퓨터
+         <input type="checkbox" name="books" value="economy"/>경제
+          <input type="checkbox" name="books" value="common"/>상식<br>
+          비고 : <br>
+          <textarea name="comments" cols="40" rows="5"></textarea><br>
+          <hr>
+          <input type="submit" value="신청"/>
+          <input type="reset" value="취소"/>
+    </form>
+</body>
+</html>

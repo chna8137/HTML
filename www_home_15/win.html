@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1> window 객체 활용</h1>
+    <script type="text/javascript">
+        var win;
+
+        function open_win() {
+            var url = prompt("url을 입력하세요", "http://");
+            if (url) win = window.open(url);
+        }
+
+    </script>
+    <button onclick="open_win();">새창에서 url열기</button>
+    <button onclick="">창 닫기</button>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko" style="background: navy;">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #intro {
+            width: 400px;
+            height: 300px;
+            margin: 0 auto;
+            border: 1px solid yellow;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h1 {
+            text-align: center;
+            color: yellow;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="intro">
+        <h1>
+            아이디/패스워드
+        </h1>
+        <form method="get" action="form_app.js,,">
+            <legend>
+                <label for="p_tel">
+                    <f>전화번호</f>
+                </label>
+                <input type="tel" name="p_tel" placeholder="휴대번호입력(-)제외" pattern="[0-9]{2J3}-[0-9]{3,4}-[0-9]{4}" />
+                <input type=submit value="인증번호 전송">
+                <br>
+                <f>인증번호</f> <input type="text" placeholder="인증번호 입력">
+                <input type="submit" value="확인">
+                <br>
+                <button id="id_find">아이디 찾기</button>
+            </legend>
+        </form>
+    </div>
+</body>
+
+</html>

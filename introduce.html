@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>회원정보 수정</title>
+    <script type="text/javascript">
+        function fnModify(id, member_pw) {
+            //alert("id : " + id);
+            var pw = prompt("비밀번호를 입력하세요", "");
+            //alert("member_pw : " + member_pw + "\npw : " + pw);
+            //member_pw : dto에 저장되어있던 비밀번호
+            //pw : 방금 사용자로부터 입력받은 비밀번호
+            if (member_pw == pw) { //맞는 비밀번호를 입력하면 URL이 바뀐다
+                //alert("비밀번호 일치합니다.")
+                location.href = "memberDetailAction.me?member_id=" + id;
+            } else {
+                alert("비밀번호가 일치하지 않습니다.");
+            }
+        }
+
+    </script>
+    <style>
+        .modify-profile {
+            margin-left: 50px;
+        }
+
+        .modify-profile2 {
+            margin-left: 82px;
+        }
+
+        .modify-profile3 {
+            margin-left: 66px;
+        }
+        #modify{
+            text-align: center;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>회원정보 수정</h1>
+    <div id="modify">
+
+    <form action="/update" method="POST">
+        <label for="name">이름</label>
+        <span class="modify-profile2"><input type="text" id="name" name="name" required></span><br>
+        
+        <label for="id">아이디</label>
+        <input type="text" id="id" name="id"><br>
+        
+        <label for="gender">성별</label>
+        <span class="modify-profile2">
+            <input type="radio" name="gender" value="female">여자
+            <input type="radio" name="gender" value="male">남자
+        </span>
+        <br>
+
+<!--
+        <label for="password">비밀번호:</label>
+        <span class="modify-profile"><input type="password" id="password" name="password" required></span><br>
+-->
+
+        <label for="birthdate">생년월일</label>
+        <span class="modify-profile"><input type="date" id="birthdate" name="birthdate" required></span><br>
+
+        <label for="phone">전화번호</label>
+        <span class="modify-profile"><input type="tel" id="phone" name="phone" required></span><br>
+
+        <label for="email">이메일</label>
+        <span class="modify-profile3"><input type="email" id="email" name="email" required></span><br>
+
+        <label for="address">주소</label>
+        <span class="modify-profile2"><input type="text" id="address" name="address" required></span><br>
+
+        <input type="submit" value="수정">
+        <input type="reset" value="취소">
+    </form>
+    </div>
+</body>
+
+</html>
+
+

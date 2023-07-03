@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>팝업 창</title>
+    <style>
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+
+
+    <button onclick="showPopup()">등록하기</button>
+
+    <div id="popup" class="popup">
+        <p>이 글을 등록하시겠습니까?</p>
+        <button onclick="confirm()">예</button>
+        <button onclick="cancel()">아니오</button>
+    </div>
+
+    <script>
+        function showPopup() {
+            var popup = document.getElementById("popup");
+            popup.style.display = "block";
+        }
+
+        function confirm() {
+            alert("글이 등록되었습니다.");
+            var popup = document.getElementById("popup");
+            popup.style.display = "none";
+        }
+
+        function cancel() {
+            var popup = document.getElementById("popup");
+            popup.style.display = "none";
+        }
+    </script>
+</body>
+</html>

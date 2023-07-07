@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* 스타일은 필요에 따라 수정해 주세요 */
+    .modal {
+      display: none;
+      /* 모달 스타일 지정 */
+    }
+  </style>
+  <script>
+    function openModal() {
+      document.getElementById("modal").style.display = "block";
+    }
+
+    function closeModal() {
+      document.getElementById("modal").style.display = "none";
+    }
+
+    function submitForm() {
+      var password = document.getElementById("password").value;
+      // 비밀번호 검증 로직
+      if (password === "비밀번호") {
+        document.getElementById("editForm").style.display = "block";
+        closeModal();
+      } else {
+        alert("비밀번호가 올바르지 않습니다.");
+      }
+    }
+  </script>
+</head>
+<body>
+  <button onclick="openModal()">회원정보 수정</button>
+
+  <!-- 비밀번호 입력 모달 -->
+  <div id="modal" class="modal">
+    <h2>비밀번호 입력</h2>
+    <input type="password" id="password" placeholder="비밀번호를 입력하세요">
+    <button onclick="submitForm()">확인</button>
+    <button onclick="closeModal()">취소</button>
+  </div>
+
+  <!-- 수정할 수 있는 폼 -->
+  <div id="editForm" style="display: none;">
+    <h2>회원정보 수정</h2>
+    <!-- 수정할 수 있는 필드들 -->
+    <form>
+      <!-- 필드들 추가 -->
+      <button type="submit">저장</button>
+    </form>
+  </div>
+</body>
+</html>

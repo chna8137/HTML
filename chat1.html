@@ -1,0 +1,1120 @@
+<!--
+=========================================================
+* Material Dashboard 2 - v3.1.0
+=========================================================
+
+* Product Page: https://www.creative-tim.com/product/material-dashboard
+* Copyright 2023 Creative Tim (https://www.creative-tim.com)
+* Licensed under MIT (https://www.creative-tim.com/license)
+* Coded by Creative Tim
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+-->
+<!DOCTYPE html>
+<html lang="kor">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="../assets/img/favicon.png">
+  <title>
+    Material Dashboard 2 by Creative Tim
+  </title>
+  <!--     Fonts and icons     -->
+  <link rel="stylesheet" type="text/css"
+    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
+  <!-- Nucleo Icons -->
+  <link href="../assets/css/nucleo-icons.css" rel="stylesheet" />
+  <link href="../assets/css/nucleo-svg.css" rel="stylesheet" />
+  <!-- Font Awesome Icons -->
+  <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+  <!-- CSS Files -->
+  <link id="pagestyle" href="../assets/css/material-dashboard.css?v=3.1.0" rel="stylesheet" />
+  <!-- Nepcha Analytics (nepcha.com) -->
+  <!-- Nepcha is a easy-to-use web analytics. No cookies and fully compliant with GDPR, CCPA and PECR. -->
+  <script defer data-site="YOUR_DOMAIN_HERE" src="https://api.nepcha.com/js/nepcha-analytics.js"></script>
+  <style>
+    .img-user {
+      width: 36px;
+      height: 36px;
+      display: block;
+    }
+
+    .img-user img {
+      width: 100%;
+      height: 100%;
+      -o-object-fit: cover;
+      object-fit: cover;
+    }
+
+    .fdd-chat-system {
+      &.show {
+        .fdd-chat-system {
+          .content-left-chat {
+            display: none;
+          }
+        }
+      }
+
+      .fdd-chat-wrap {
+        display: flex;
+        background-color: #ffffff;
+      }
+
+      .content-left-chat {
+        box-sizing: border-box;
+        float: left;
+        position: relative;
+
+        .chat-title-wrapper {
+          background-color: #fff;
+          border-bottom: solid 1px #ccc;
+          height: 65px;
+          padding: 20px 15px;
+          position: absolute;
+          width: 100%;
+
+          h2 {
+            margin: 0;
+            font-size: 18px;
+            padding: 0px;
+          }
+        }
+
+        .chat-list-primary {
+          background-color: #ececec;
+        }
+
+        .chat-list {
+          width: 406px;
+          position: relative;
+          flex-direction: column;
+          padding: 0;
+          flex-shrink: 0;
+          margin-top: 65px;
+          min-height: 200px;
+
+          .media {
+            padding: 12px 20px;
+            border: 1px solid transparent;
+            position: relative;
+            display: flex;
+            align-items: flex-start;
+            cursor: pointer;
+
+            .img-user {
+              flex-shrink: 0;
+              top: 3px;
+            }
+
+            .media-body {
+              margin-left: 15px;
+
+              .media-contact-name {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 2px;
+
+                span {
+                  &:first-child {
+                    display: block;
+                    font-size: 14px;
+                    font-weight: 500;
+                    color: #212229;
+                  }
+
+                  &:last-child {
+                    display: block;
+                    font-size: 11px;
+                    color: #969dab;
+                  }
+                }
+              }
+
+              p {
+                font-size: 13px;
+                margin-bottom: 0;
+                color: #70737c;
+                line-height: 1.35;
+              }
+            }
+          }
+        }
+      }
+
+      .content-body-chat {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        width: calc(100% - 406px);
+
+        .fdd-top-header {
+          flex-shrink: 0;
+          height: 65px;
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          padding: 0px 15px;
+          border-bottom: 1px solid #ced4da;
+
+          .back-btn {
+            width: 32px;
+            height: 26px;
+            margin-right: 15px;
+            cursor: pointer;
+            display: none;
+
+            span {
+              background-color: #333;
+              width: 20px;
+              position: absolute;
+              display: block;
+              height: 3px;
+              border-radius: 20px;
+              top: 32px;
+              left: 20px;
+
+              &:after,
+              &:before {
+                position: absolute;
+                content: '';
+                background-color: #333;
+                width: 15px;
+                height: 3px;
+                border-radius: 20px;
+                -webkit-transform: rotate(45deg);
+                transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                left: -5px;
+                top: 4px;
+              }
+
+              &:before {
+                -webkit-transform: rotate(-37deg);
+                transform: rotate(-45deg);
+                -ms-transform: rotate(-37deg);
+                left: -5px;
+                top: -4px;
+              }
+            }
+          }
+
+          .chat-msg-name {
+            margin-left: 20px;
+
+            h6 {
+              font-size: 14px;
+              font-weight: 600;
+              margin: 0;
+            }
+
+            small {
+              font-size: 12px;
+              color: #717171;
+            }
+          }
+
+          .nav {
+            margin-left: auto;
+            align-items: center;
+
+            .nav-link {
+              padding: 0;
+              color: #ced4da;
+              font-size: 20px;
+
+              &+.nav-link {
+                margin-left: 10px;
+              }
+            }
+          }
+        }
+
+        .fdd-mid-connent {
+          padding-bottom: 0;
+          height: calc(100vh - 115px);
+          overflow-y: scroll;
+          min-height: 150px;
+          position: relative;
+
+          .content-inner {
+            padding: 20px;
+
+            .chat-time {
+              display: block;
+              position: relative;
+              text-align: center;
+              margin: 20px 0;
+            }
+
+            .media {
+              display: flex;
+              align-items: flex-start;
+
+              &.flex-row-reverse {
+                flex-direction: row-reverse !important;
+
+                .media-body {
+                  margin-left: 55px;
+                  margin-right: 20px;
+                  align-items: flex-end;
+                  display: flex;
+                  flex-direction: column;
+
+                  .msg-wrapper {
+                    background-color: #6610f2;
+                    color: #ffffff;
+                  }
+                }
+              }
+
+              .media-body {
+                margin-left: 20px;
+                margin-right: 55px;
+                align-items: flex-start;
+                flex: 1;
+
+                .msg-wrapper {
+                  background-color: #dee2e6;
+                  color: #494c57;
+                  padding: 10px 15px;
+                  font-size: 13px;
+                  margin-bottom: 5px;
+                  border-radius: 2px;
+                  display: inline-block;
+
+                  &.p-0 {
+                    padding: 0px;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .fdd-btm-footer {
+          position: relative;
+          bottom: auto;
+          left: auto;
+          right: auto;
+          flex-shrink: 0;
+          display: flex;
+          align-items: center;
+          height: 50px;
+          padding: 0 20px;
+          border-top: 1px solid #ced4da;
+          background-color: #fff;
+          margin-bottom: 0px;
+
+          .nav {
+            align-items: center;
+            width: 100px;
+            display: flex;
+            flex-wrap: wrap;
+            padding-left: 0;
+            margin-bottom: 0;
+            list-style: none;
+
+            .nav-link {
+              padding: 0;
+              color: #969dab;
+              font-size: 16px;
+
+              &+.nav-link {
+                margin-left: 10px;
+
+                &.emoji-icon {
+                  margin-left: 25px;
+                }
+              }
+            }
+          }
+
+          .emoji-menu {
+            left: 0px;
+            bottom: 50px;
+          }
+
+          .emoji-picker-icon {
+            right: auto;
+            left: 70px;
+            top: 15px;
+            color: #969dab;
+            opacity: 1;
+          }
+
+          .form-control {
+            border: 0;
+            height: 34px !important;
+          }
+
+          #msg-send {
+            cursor: pointer;
+            position: absolute;
+            right: 35px;
+            color: #6610f2;
+          }
+        }
+      }
+    }
+
+    /* END DESKTOP SCSS */
+
+    /* RESPONSIVE */
+
+    @media only screen and (max-width: 1024px) {
+      .fdd-chat-system {
+        .content-left-chat {
+          width: calc(100% - 320px);
+
+          .chat-list {
+            width: 320px;
+          }
+        }
+      }
+
+    }
+
+    @media only screen and (max-width: 767px) {
+      .fdd-chat-system {
+        .content-left-chat {
+          width: calc(100% - 0px);
+
+          .chat-list {
+            width: 100%;
+          }
+        }
+
+        .content-body-chat {
+          display: none;
+          width: 100%;
+
+          .fdd-top-header {
+            .back-btn {
+              display: block;
+            }
+          }
+        }
+
+        &.show {
+          .content-left-chat {
+            display: none;
+          }
+
+          .content-body-chat {
+            display: block;
+          }
+        }
+      }
+    }
+  </style>
+</head>
+
+<body class="g-sidenav-show  bg-gray-200">
+  <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3"
+    id="sidenav-main" style="background-color: rgb(34, 34, 97);">
+    <div class="sidenav-header">
+      <i class="fas fa-times p-3 cursor-pointer text-white opacity-5 position-absolute end-0 top-0 d-none d-xl-none"
+        aria-hidden="true" id="iconSidenav"></i>
+      <a class="navbar-brand m-0" href="../pages/index.html" target="_self">
+        <!-- <img src="../assets/img/logo-ct.png" class="navbar-brand-img h-100" alt="main_logo"> -->
+        <span class="ms-1 font-weight-bold"
+          style="color: white;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TAXMATE</span>
+      </a>
+    </div>
+    <hr class="horizontal light mt-0 mb-2">
+    <div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="../pages/scan.html">
+            <div class="text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="material-icons opacity-10">view_in_ar</i>
+            </div>
+            <span class="nav-link-text ms-1">스캔</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../pages/calendar.html">
+            <div class="text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="material-icons opacity-10">event_available</i>
+            </div>
+            <span class="nav-link-text ms-1">캘린더</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../pages/consult.html">
+            <div class="text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="material-icons opacity-10">groups</i>
+            </div>
+            <span class="nav-link-text ms-1">세무사 상담</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../pages/tables.html">
+            <div class="text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="material-icons opacity-10">contact_support</i>
+            </div>
+            <span class="nav-link-text ms-1">Q & A</span>
+          </a>
+        </li>
+
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="../pages/notifications.html">
+            <div class="text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="material-icons opacity-10">notifications</i>
+            </div>
+            <span class="nav-link-text ms-1">Notifications</span>
+          </a>
+        </li> -->
+        <li class="nav-item mt-3">
+          <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-8" style="color: white;">마이페이지
+          </h6>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active bg-gradient-primary" href="../pages/chat-list.html">
+            <div class="text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="material-icons opacity-10">forum</i>
+            </div>
+            <span class="nav-link-text ms-1">채팅</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../pages/mybill.html">
+            <div class="text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="material-icons opacity-10">wallet</i>
+            </div>
+            <span class="nav-link-text ms-1">my 고지서</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../pages/profile.html">
+            <div class="text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="material-icons opacity-10">person</i>
+            </div>
+            <span class="nav-link-text ms-1">내 프로필</span>
+          </a>
+        </li>
+
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="../pages/sign-in.html">
+            <div class="text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="material-icons opacity-10">login</i>
+            </div>
+            <span class="nav-link-text ms-1">Sign In</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../pages/sign-up.html">
+            <div class="text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="material-icons opacity-10">assignment</i>
+            </div>
+            <span class="nav-link-text ms-1">Sign Up</span>
+          </a>
+        </li> -->
+      </ul>
+    </div>
+    <div class="sidenav-footer position-absolute w-100 bottom-0 ">
+      <!-- <div class="mx-3">
+        <a class="btn btn-outline-primary mt-4 w-100"
+          href="https://www.creative-tim.com/learning-lab/bootstrap/overview/material-dashboard?ref=sidebarfree"
+          type="button">Documentation</a>
+        <a class="btn bg-gradient-primary w-100"
+          href="https://www.creative-tim.com/product/material-dashboard-pro?ref=sidebarfree" type="button">Upgrade to
+          pro</a>
+      </div> -->
+    </div>
+  </aside>
+  <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
+    <!-- Navbar -->
+    <!-- End Navbar -->
+    <div class="container-fluid py-4">
+      <div class="row">
+        <div class="col-12">
+          <div class="card my-4" style="margin-top: 4rem !important;">
+            <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+              <!-- <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
+                <h6 class="text-white text-capitalize ps-3">Authors table</h6>
+              </div> -->
+            </div>
+            <!-- <div class="card-body px-0 pb-2" style="height: 90vh;"> -->
+              <div class="fdd-chat-system"
+                style="height: auto; padding: 1.5rem; padding-bottom: 0 !important; padding-left: 0 !important; border-radius: 10px; padding-right: 0 !important;">
+                <!-- 새로 넣음 -->
+                <div class="fdd-chat-wrap clearfix" style="border-radius: 10px;">
+                  <div class="content-left-chat" style="border-right: 1px solid #ced4da;">
+                    <div class="chat-title-wrapper"
+                      style="text-align:center; padding-top: 20px; border-top-left-radius: 10px;">
+                      <h5>채팅</h5>
+                    </div>
+                    <!-- 채팅방 목록 -->
+                    <div class="chat-list">
+                      <a href="chatbot.html">
+                        <div class="media">
+                          <div class="img-user online">
+                            <img alt="" src="../assets/img/icons/chatbot.png" class="img-responsive">
+                          </div>
+                          <div class="media-body">
+                            <div class="media-contact-name">
+                              <span style="font-weight: bold;">내 손 안의 세무서</span>
+                              <!-- <span>2 hours</span> -->
+                            </div>
+                            <p style="margin: 0;">안녕하세요! 내 손 안의 세무서를 이용해 주...</p>
+                          </div>
+                        </div>
+                      </a>
+                      <a href="chat1.html">
+                        <div class="chat-list-primary media">
+                          <div class="img-user online">
+                            <img alt="" src="../assets/img/icons/chat_tax.png" class="img-responsive">
+                          </div>
+                          <div class="media-body">
+                            <div class="media-contact-name">
+                              <span style="font-weight: bold;">다이음 세무사</span>
+                              <span>오전 10:54</span>
+                            </div>
+                            <p style="margin: 0;">네 감사합니다.
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            </p>
+                          </div>
+                        </div>
+                      </a>
+                      <a href="chat2.html">
+                        <div class="media">
+                          <div class="img-user online">
+                            <img alt="" src="../assets/img/icons/chat_tax.png" class="img-responsive">
+                          </div>
+                          <div class="media-body">
+                            <div class="media-contact-name">
+                              <span style="font-weight: bold;">홍길동 세무사</span>
+                              <span>2023/08/03</span>
+                            </div>
+                            <p style="margin: 0;">언제쯤 마무리 될까요? 다름이 아니라 제가...</p>
+                          </div>
+                        </div>
+                      </a>
+                      <a href="chat3.html">
+                        <div class="media">
+                          <div class="img-user online">
+                            <img alt="" src="../assets/img/icons/chat_tax.png" class="img-responsive">
+                          </div>
+                          <div class="media-body">
+                            <div class="media-contact-name">
+                              <span style="font-weight: bold;">나영희 세무사</span>
+                              <span>2023/07/09</span>
+                            </div>
+                            <p style="margin: 0;">사진
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            </p>
+                          </div>
+                        </div>
+                      </a>
+                      <a href="chat4.html" >
+                        <div class="media">
+                          <div class="img-user online">
+                            <img alt="" src="../assets/img/icons/chat_tax.png" class="img-responsive">
+                          </div>
+                          <div class="media-body">
+                            <div class="media-contact-name">
+                              <span style="font-weight: bold;">개나리 세무사</span>
+                              <span>2023/05/14</span>
+                            </div>
+                            <p style="margin: 0;">아닙니다ㅎㅎ 다음에 또 이용해주세요^^ 감...</p>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <!-- 채팅창 -->
+                  <div class="content-body-chat" style="height: 80vh;">
+                    <div class="fdd-top-header">
+                      <div class="back-btn">
+                        <span></span>
+                      </div>
+                      <div class="img-user"><img src="../assets/img/icons/chat_tax.png" alt="" class="img-responsive">
+                      </div>
+                      <div class="chat-msg-name">
+                        <h6 style="margin: 10px 0px 0px;">다이음 세무사</h6>
+                        <small>최근 활동: 2 분전</small>
+                      </div>
+                      <nav class="nav">
+                        <a class="nav-link" href=""><i class="fa fa-file-text-o"></i></a>
+                        <a class="nav-link" href=""><i class="fa fa-phone"></i></a>
+                        <a class="nav-link" href=""><i class="fa fa-trash-o"></i></a>
+                        <a class="nav-link" href=""><i class="fa fa-info-circle"></i></a>
+                      </nav>
+                    </div>
+                    <div class="fdd-mid-connent">
+                      <div class="content-inner" id="ChatBody">
+                        <label class="chat-time"><span>2023.08.01 화</span></label> <!-- 첫번째 대화 덩어리-->
+                        <div class="media flex-row-reverse">
+                          <!-- <div class="img-user online"><img src="http://themepixels.me/azia/img/img1.jpg" alt=""></div> -->
+                          <div class="media-body">
+                            <div class="msg-wrapper">
+                              Nulla consequat massa quis enim. Donec pede justo, fringilla vel...
+                            </div>
+                            <!-- <div class="msg-wrapper">rhoncus ut, imperdiet a, venenatis vitae, justo...</div> -->
+                            <!-- <div class="msg-wrapper p-0">
+                              <img src="http://themepixels.me/azia/img/img1.jpg" style="width: 200px;" alt="">
+                            </div> -->
+                            <div class="time"><span>9:48 am</span></div>
+                          </div>
+                        </div>
+                        <div class="media">
+                          <div class="img-user online"><img src="../assets/img/icons/chat_tax.png" alt=""></div>
+                          <div class="media-body">
+                            <div class="msg-wrapper">
+                              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
+                              dolor.
+                            </div>
+                            <div class="time"><span>9:32 am</span></div>
+                          </div>
+                        </div>
+                        <label class="chat-time"><span>어제</span></label> <!-- 두번째 대화 덩어리-->
+                        <div class="media flex-row-reverse">
+                          <!-- <div class="img-user online"><img src="http://themepixels.me/azia/img/img1.jpg" alt=""></div> -->
+                          <div class="media-body">
+                            <!-- <div class="msg-wrapper">
+                              Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
+                              quis enim.
+                              Donec pede justo, fringilla vel, aliquet nec. In enim justo, rhoncus ut, imperdiet a,
+                              venenatis
+                              vitae,
+                              justo.
+                            </div> -->
+                            <div class="msg-wrapper">
+                              Nullam dictum felis eu pede mollis pretium
+                            </div>
+                            <div class="time"><span>9:48 am</span></div>
+                          </div>
+                        </div>
+                        <label class="chat-time"><span>오늘</span></label> <!-- 세번째 대화 덩어리-->
+                        <div class="media">
+                          <div class="img-user online"><img src="../assets/img/icons/chat_tax.png" alt=""></div>
+                          <div class="media-body">
+                            <div class="msg-wrapper">
+                              Maecenas tempus, tellus eget condimentum rhoncus
+                            </div>
+                            <!-- <div class="msg-wrapper">
+                              Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et
+                              ante tincidunt
+                              tempus. Donec vitae sapien ut libero venenatis faucibus.
+                            </div> -->
+                            <div class="time"><span>오전 10:49</span></div>
+                          </div>
+                        </div>
+                        <div class="media flex-row-reverse">
+                          <!-- <div class="img-user online"><img src="http://themepixels.me/azia/img/img1.jpg" alt=""></div> -->
+                          <div class="media-body">
+                            <!-- <div class="msg-wrapper">
+                              Maecenas tempus, tellus eget condimentum rhoncus
+                            </div> -->
+                            <div class="msg-wrapper">
+                              Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et
+                              ante tincidunt
+                              tempus. Donec vitae sapien ut libero venenatis faucibus.
+                            </div>
+                            <div class="time"><span>오전 10:54</span></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="fdd-btm-footer lead emoji-picker-container">
+                      <nav class="nav">
+                        <a href="" class="nav-link" data-toggle="tooltip" title="" data-original-title="Add Photo"><i
+                            class="fa fa-camera"></i></a>
+                        <a href="" class="nav-link" data-toggle="tooltip" title=""
+                          data-original-title="Attach a File"><i class="fa fa-paperclip"></i></a>
+                        <a href="" class="nav-link" data-toggle="tooltip" title=""
+                          data-original-title="Add Emoticons"><i class="fa fa-smile"></i></a>
+                        <a href="" class="nav-link emoji-icon"></a>
+                      </nav>
+                      <input type="text" id="textarea" class="form-control" data-emojiable="true"
+                        placeholder="메세지를 입력하세요">
+                      <span id="msg-send"><i class="fa fa-paper-plane"></i></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="row">
+        <div class="col-12">
+          <div class="card my-4">
+            <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+              <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
+                <h6 class="text-white text-capitalize ps-3">Projects table</h6>
+              </div>
+            </div>
+            <div class="card-body px-0 pb-2">
+              <div class="table-responsive p-0">
+                <table class="table align-items-center justify-content-center mb-0">
+                  <thead>
+                    <tr>
+                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Project</th>
+                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Budget</th>
+                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Status</th>
+                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder text-center opacity-7 ps-2">Completion</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div class="d-flex px-2">
+                          <div>
+                            <img src="../assets/img/small-logos/logo-asana.svg" class="avatar avatar-sm rounded-circle me-2" alt="spotify">
+                          </div>
+                          <div class="my-auto">
+                            <h6 class="mb-0 text-sm">Asana</h6>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <p class="text-sm font-weight-bold mb-0">$2,500</p>
+                      </td>
+                      <td>
+                        <span class="text-xs font-weight-bold">working</span>
+                      </td>
+                      <td class="align-middle text-center">
+                        <div class="d-flex align-items-center justify-content-center">
+                          <span class="me-2 text-xs font-weight-bold">60%</span>
+                          <div>
+                            <div class="progress">
+                              <div class="progress-bar bg-gradient-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="align-middle">
+                        <button class="btn btn-link text-secondary mb-0">
+                          <i class="fa fa-ellipsis-v text-xs"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="d-flex px-2">
+                          <div>
+                            <img src="../assets/img/small-logos/github.svg" class="avatar avatar-sm rounded-circle me-2" alt="invision">
+                          </div>
+                          <div class="my-auto">
+                            <h6 class="mb-0 text-sm">Github</h6>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <p class="text-sm font-weight-bold mb-0">$5,000</p>
+                      </td>
+                      <td>
+                        <span class="text-xs font-weight-bold">done</span>
+                      </td>
+                      <td class="align-middle text-center">
+                        <div class="d-flex align-items-center justify-content-center">
+                          <span class="me-2 text-xs font-weight-bold">100%</span>
+                          <div>
+                            <div class="progress">
+                              <div class="progress-bar bg-gradient-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="align-middle">
+                        <button class="btn btn-link text-secondary mb-0" aria-haspopup="true" aria-expanded="false">
+                          <i class="fa fa-ellipsis-v text-xs"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="d-flex px-2">
+                          <div>
+                            <img src="../assets/img/small-logos/logo-atlassian.svg" class="avatar avatar-sm rounded-circle me-2" alt="jira">
+                          </div>
+                          <div class="my-auto">
+                            <h6 class="mb-0 text-sm">Atlassian</h6>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <p class="text-sm font-weight-bold mb-0">$3,400</p>
+                      </td>
+                      <td>
+                        <span class="text-xs font-weight-bold">canceled</span>
+                      </td>
+                      <td class="align-middle text-center">
+                        <div class="d-flex align-items-center justify-content-center">
+                          <span class="me-2 text-xs font-weight-bold">30%</span>
+                          <div>
+                            <div class="progress">
+                              <div class="progress-bar bg-gradient-danger" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="30" style="width: 30%;"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="align-middle">
+                        <button class="btn btn-link text-secondary mb-0" aria-haspopup="true" aria-expanded="false">
+                          <i class="fa fa-ellipsis-v text-xs"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="d-flex px-2">
+                          <div>
+                            <img src="../assets/img/small-logos/bootstrap.svg" class="avatar avatar-sm rounded-circle me-2" alt="webdev">
+                          </div>
+                          <div class="my-auto">
+                            <h6 class="mb-0 text-sm">Bootstrap</h6>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <p class="text-sm font-weight-bold mb-0">$14,000</p>
+                      </td>
+                      <td>
+                        <span class="text-xs font-weight-bold">working</span>
+                      </td>
+                      <td class="align-middle text-center">
+                        <div class="d-flex align-items-center justify-content-center">
+                          <span class="me-2 text-xs font-weight-bold">80%</span>
+                          <div>
+                            <div class="progress">
+                              <div class="progress-bar bg-gradient-info" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="80" style="width: 80%;"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="align-middle">
+                        <button class="btn btn-link text-secondary mb-0" aria-haspopup="true" aria-expanded="false">
+                          <i class="fa fa-ellipsis-v text-xs"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="d-flex px-2">
+                          <div>
+                            <img src="../assets/img/small-logos/logo-slack.svg" class="avatar avatar-sm rounded-circle me-2" alt="slack">
+                          </div>
+                          <div class="my-auto">
+                            <h6 class="mb-0 text-sm">Slack</h6>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <p class="text-sm font-weight-bold mb-0">$1,000</p>
+                      </td>
+                      <td>
+                        <span class="text-xs font-weight-bold">canceled</span>
+                      </td>
+                      <td class="align-middle text-center">
+                        <div class="d-flex align-items-center justify-content-center">
+                          <span class="me-2 text-xs font-weight-bold">0%</span>
+                          <div>
+                            <div class="progress">
+                              <div class="progress-bar bg-gradient-success" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="0" style="width: 0%;"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="align-middle">
+                        <button class="btn btn-link text-secondary mb-0" aria-haspopup="true" aria-expanded="false">
+                          <i class="fa fa-ellipsis-v text-xs"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="d-flex px-2">
+                          <div>
+                            <img src="../assets/img/small-logos/devto.svg" class="avatar avatar-sm rounded-circle me-2" alt="xd">
+                          </div>
+                          <div class="my-auto">
+                            <h6 class="mb-0 text-sm">Devto</h6>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <p class="text-sm font-weight-bold mb-0">$2,300</p>
+                      </td>
+                      <td>
+                        <span class="text-xs font-weight-bold">done</span>
+                      </td>
+                      <td class="align-middle text-center">
+                        <div class="d-flex align-items-center justify-content-center">
+                          <span class="me-2 text-xs font-weight-bold">100%</span>
+                          <div>
+                            <div class="progress">
+                              <div class="progress-bar bg-gradient-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="align-middle">
+                        <button class="btn btn-link text-secondary mb-0" aria-haspopup="true" aria-expanded="false">
+                          <i class="fa fa-ellipsis-v text-xs"></i>
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div> -->
+    </div>
+    <!-- <footer class="footer py-4  ">
+      <div class="container-fluid">
+        <div class="row align-items-center justify-content-lg-between">
+          <div class="col-lg-6 mb-lg-0 mb-4">
+            <div class="copyright text-center text-sm text-muted text-lg-start">
+              ©
+              <script>
+                document.write(new Date().getFullYear())
+              </script>,
+              made with <i class="fa fa-heart"></i> by
+              <a href="https://www.creative-tim.com" class="font-weight-bold" target="_blank">Creative Tim</a>
+              for a better web.
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <ul class="nav nav-footer justify-content-center justify-content-lg-end">
+              <li class="nav-item">
+                <a href="https://www.creative-tim.com" class="nav-link text-muted" target="_blank">Creative Tim</a>
+              </li>
+              <li class="nav-item">
+                <a href="https://www.creative-tim.com/presentation" class="nav-link text-muted" target="_blank">About
+                  Us</a>
+              </li>
+              <li class="nav-item">
+                <a href="https://www.creative-tim.com/blog" class="nav-link text-muted" target="_blank">Blog</a>
+              </li>
+              <li class="nav-item">
+                <a href="https://www.creative-tim.com/license" class="nav-link pe-0 text-muted"
+                  target="_blank">License</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer> -->
+    </div>
+  </main>
+  <div class="fixed-plugin">
+    <a class="fixed-plugin-button text-dark position-fixed px-3 py-2">
+      <i class="material-icons py-2">settings</i>
+    </a>
+    <div class="card shadow-lg">
+      <div class="card-header pb-0 pt-3">
+        <div class="float-start">
+          <h5 class="mt-3 mb-0">Material UI Configurator</h5>
+          <p>See our dashboard options.</p>
+        </div>
+        <div class="float-end mt-4">
+          <button class="btn btn-link text-dark p-0 fixed-plugin-close-button">
+            <i class="material-icons">clear</i>
+          </button>
+        </div>
+        <!-- End Toggle Button -->
+      </div>
+      <hr class="horizontal dark my-1">
+      <div class="card-body pt-sm-3 pt-0">
+        <!-- Sidebar Backgrounds -->
+        <div>
+          <h6 class="mb-0">Sidebar Colors</h6>
+        </div>
+        <a href="javascript:void(0)" class="switch-trigger background-color">
+          <div class="badge-colors my-2 text-start">
+            <span class="badge filter bg-gradient-primary active" data-color="primary"
+              onclick="sidebarColor(this)"></span>
+            <span class="badge filter bg-gradient-dark" data-color="dark" onclick="sidebarColor(this)"></span>
+            <span class="badge filter bg-gradient-info" data-color="info" onclick="sidebarColor(this)"></span>
+            <span class="badge filter bg-gradient-success" data-color="success" onclick="sidebarColor(this)"></span>
+            <span class="badge filter bg-gradient-warning" data-color="warning" onclick="sidebarColor(this)"></span>
+            <span class="badge filter bg-gradient-danger" data-color="danger" onclick="sidebarColor(this)"></span>
+          </div>
+        </a>
+        <!-- Sidenav Type -->
+        <div class="mt-3">
+          <h6 class="mb-0">Sidenav Type</h6>
+          <p class="text-sm">Choose between 2 different sidenav types.</p>
+        </div>
+        <div class="d-flex">
+          <button class="btn bg-gradient-dark px-3 mb-2 active" data-class="bg-gradient-dark"
+            onclick="sidebarType(this)">Dark</button>
+          <button class="btn bg-gradient-dark px-3 mb-2 ms-2" data-class="bg-transparent"
+            onclick="sidebarType(this)">Transparent</button>
+          <button class="btn bg-gradient-dark px-3 mb-2 ms-2" data-class="bg-white"
+            onclick="sidebarType(this)">White</button>
+        </div>
+        <p class="text-sm d-xl-none d-block mt-2">You can change the sidenav type just on desktop view.</p>
+        <!-- Navbar Fixed -->
+        <div class="mt-3 d-flex">
+          <h6 class="mb-0">Navbar Fixed</h6>
+          <div class="form-check form-switch ps-0 ms-auto my-auto">
+            <input class="form-check-input mt-1 ms-auto" type="checkbox" id="navbarFixed" onclick="navbarFixed(this)">
+          </div>
+        </div>
+        <hr class="horizontal dark my-3">
+        <div class="mt-2 d-flex">
+          <h6 class="mb-0">Light / Dark</h6>
+          <div class="form-check form-switch ps-0 ms-auto my-auto">
+            <input class="form-check-input mt-1 ms-auto" type="checkbox" id="dark-version" onclick="darkMode(this)">
+          </div>
+        </div>
+        <hr class="horizontal dark my-sm-4">
+        <a class="btn bg-gradient-info w-100" href="https://www.creative-tim.com/product/material-dashboard-pro">Free
+          Download</a>
+        <a class="btn btn-outline-dark w-100"
+          href="https://www.creative-tim.com/learning-lab/bootstrap/overview/material-dashboard">View documentation</a>
+        <div class="w-100 text-center">
+          <a class="github-button" href="https://github.com/creativetimofficial/material-dashboard"
+            data-icon="octicon-star" data-size="large" data-show-count="true"
+            aria-label="Star creativetimofficial/material-dashboard on GitHub">Star</a>
+          <h6 class="mt-3">Thank you for sharing!</h6>
+          <a href="https://twitter.com/intent/tweet?text=Check%20Material%20UI%20Dashboard%20made%20by%20%40CreativeTim%20%23webdesign%20%23dashboard%20%23bootstrap5&amp;url=https%3A%2F%2Fwww.creative-tim.com%2Fproduct%2Fsoft-ui-dashboard"
+            class="btn btn-dark mb-0 me-2" target="_blank">
+            <i class="fab fa-twitter me-1" aria-hidden="true"></i> Tweet
+          </a>
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.creative-tim.com/product/material-dashboard"
+            class="btn btn-dark mb-0 me-2" target="_blank">
+            <i class="fab fa-facebook-square me-1" aria-hidden="true"></i> Share
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--   Core JS Files   -->
+  <script src="../assets/js/core/popper.min.js"></script>
+  <script src="../assets/js/core/bootstrap.min.js"></script>
+  <script src="../assets/js/plugins/perfect-scrollbar.min.js"></script>
+  <script src="../assets/js/plugins/smooth-scrollbar.min.js"></script>
+  <script>
+    var win = navigator.platform.indexOf('Win') > -1;
+    if (win && document.querySelector('#sidenav-scrollbar')) {
+      var options = {
+        damping: '0.5'
+      }
+      Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
+    }
+  </script>
+  <!-- Github buttons -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
+  <script src="../assets/js/material-dashboard.min.js?v=3.1.0"></script>
+</body>
+
+</html>
